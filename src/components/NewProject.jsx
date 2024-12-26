@@ -3,7 +3,7 @@ import Input from "./Input";
 import Button from "./Button";
 import Modal from "./Modal";
 
-function NewProject({ onSave }) {
+function NewProject({ onSave , onCancle}) {
   const modal = useRef();
   const title = useRef();
   const description = useRef();
@@ -32,13 +32,13 @@ function NewProject({ onSave }) {
   return (
     <>
     <Modal ref={modal} buttonCaption="Okay">
-      <h2>Invalid Input</h2>
-      <p>Please enter a valid title or description or due date</p>
+      <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
+      <p className="text-stone-600 mb-4">Please enter a valid title or description or due date</p>
     </Modal>
     <div className="w-[35rem] mt-16 ">
       <menu className="flex items-center justify-end gap-4 my-4 ">
         <li>
-          <button className="text-stone-800 hover:text-stone-950">
+          <button className="text-stone-800 hover:text-stone-950" onClick={onCancle}>
             Cancel
           </button>
         </li>
