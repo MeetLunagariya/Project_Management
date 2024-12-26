@@ -19,13 +19,15 @@ function ProjectsSidebar({
       </div>
       <ul className="mt-8">
         {projects.map((project) => {
-
-          let cssClasses = 'w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800'
+          let cssClasses =
+            "w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800";
 
           if (project.id === selectedProjectId) {
-            // cssClasses += ' bg-stone-800 text-stone-50'
-          }else{
-            cssClasses += ' bg-stone-400'
+            console.log("selected project id", selectedProjectId);
+            cssClasses += " bg-stone-800 text-stone-50";
+          } else {
+            console.log("selected project id", selectedProjectId);
+            cssClasses += " bg-stone-400";
           }
 
           return (
